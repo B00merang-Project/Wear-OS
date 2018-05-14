@@ -495,7 +495,7 @@ combobox entry {
     border-bottom-right-radius: 0;
 }
 
-combobox button {
+combobox button:not(:only-child) {
     border-bottom-left-radius: 0;
     border-style: inset;
     border-top-left-radius: 0;
@@ -1732,7 +1732,6 @@ scale.vertical.fine-tune indicator {
 scrollbar {
     background-color: transparent;
     transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    padding: 2px;
 }
 
 scrollbar:backdrop {
@@ -1744,13 +1743,13 @@ scrollbar:backdrop {
 scrollbar slider {
     min-width: 4px;
     min-height: 4px;
-    border-radius: 0;
+    border-radius: 3px;
     border: none;
-    background-color: shade(@theme_bg_color, 0.6);
+    background-color: alpha(@theme_fg_color, 0.6);
 }
 
 scrollbar slider:hover {
-    background-color: shade(@theme_bg_color, 0.6);
+    background-color: alpha(@theme_fg_color, 0.7);
 }
 
 scrollbar slider:hover:active {
@@ -1758,7 +1757,7 @@ scrollbar slider:hover:active {
 }
 
 scrollbar slider:backdrop {
-    background-color: shade(@theme_bg_color, 0.8);
+    background-color: alpha(@theme_fg_color, 0.4);
 }
 
 scrollbar slider:disabled {
@@ -1768,6 +1767,7 @@ scrollbar slider:disabled {
 scrollbar.fine-tune slider {
     min-width: 4px;
     min-height: 4px;
+    border-radius: 3px;
 }
 
 scrollbar.fine-tune.horizontal slider {
@@ -1782,14 +1782,15 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
     border: none;
     opacity: 1;
     margin: 0;
-    background-color: transparent;
+    background-color: shade(@theme_bg_color, 0.9);
 }
 
 scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
     margin: 0;
     min-width: 4px;
     min-height: 4px;
-    background-color: shade(@theme_bg_color, 0.6);
+    background-color: alpha(@theme_fg_color, 0.25);
+    border-radius: 3px;
     border: none;
 }
 
@@ -2163,28 +2164,17 @@ switch {
     border: none;
     border-radius: 100%;
     margin: 6px;
-    background-color:  mix(@theme_bg_color, @theme_fg_color, 0.3);
-}
-
-switch:checked {
-    border-color: @theme_bg_color;
-    background-color: alpha(@theme_selected_bg_color, 0.4);
+    background-color: mix(@theme_bg_color, @theme_fg_color, 0.15);
 }
 
 switch:disabled {
     border-color: @theme_bg_color;
-    background-color: mix(@theme_bg_color, @theme_fg_color, 0.15);
+    background-color: mix(@theme_bg_color, @theme_fg_color, 0.05);
 }
 
 switch:backdrop {
     background-color: mix(@theme_bg_color, @theme_fg_color, 0.2);
     transition: 200ms ease-out;
-}
-
-switch:backdrop:checked {
-    color: transparent;
-    border-color: @theme_bg_color;
-    background-color: mix(@theme_bg_color, @theme_fg_color, 0.1);
 }
 
 switch:backdrop:disabled {
@@ -2206,7 +2196,7 @@ switch slider {
     border-color: #ececec;
     text-shadow: none;
     -gtk-icon-shadow: none;
-    background-color: mix(@theme_bg_color, @theme_fg_color, 0.05);
+    background-color: mix(@theme_bg_color, @theme_fg_color, 0.5);
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -3054,7 +3044,7 @@ progressbar.vertical .osd progress {
 }
 
 .osd scrollbar slider,
-scrollbar slider {
+scrollbar.osd slider {
     border-width: 1px;
     border-color: mix(shade(@osd_base, 0.87), @osd_fg, 0.21);
     border-radius: 0;
@@ -3062,13 +3052,13 @@ scrollbar slider {
 }
 
 .osd scrollbar slider,
-scrollbar slider:hover {
+scrollbar.osd slider:hover {
     border-color: mix(shade(@osd_base, 0.87), @osd_fg, 0.31);
     background-color: mix(@osd_base, @osd_fg, 0.31);
 }
 
 .osd scrollbar slider,
-scrollbar slider:active {
+scrollbar.osd slider:active {
     border-color: shade(@theme_bg_color, 0.9);
     background-color: @theme_bg_color;
 }
