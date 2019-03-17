@@ -1430,7 +1430,7 @@ statusbar {
 switch {
   font-size: 0;
   outline-offset: -4px;
-  margin: 5px;
+  margin: 2px;
   border: none;
   border-radius: 100%;
   background-color: mix(@theme_bg_color, @theme_fg_color, 0.15); }
@@ -2136,12 +2136,13 @@ messagedialog {
     padding-right: 12px;
     color: alpha(currentColor, 0.7); }
   .titlebar .titlebutton.close, .titlebar .titlebutton.maximize, .titlebar .titlebutton.minimize, .titlebar .titlebutton:not(separator) {
-    padding: 2px 2px; }
+    padding: 2px 2px;
+    background-color: transparent; }
   .tiled .titlebar:not(headerbar), .tiled .titlebar:backdrop:not(headerbar), .maximized .titlebar:not(headerbar), .maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0; }
 
 .titlebar, .titlebar:not(headerbar), headerbar.default-decoration, .csd headerbar.default-decoration, .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar) {
-  min-height: 36px;
+  min-height: 30px;
   color: @titlebar_fg_color;
   background-color: @titlebar_bg_color; }
   .titlebar:backdrop, .titlebar:not(headerbar):backdrop, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop, .default-decoration.titlebar:not(headerbar):backdrop, .csd .default-decoration.titlebar:not(headerbar):backdrop {
