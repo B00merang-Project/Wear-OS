@@ -1,4 +1,7 @@
-# Wear-OS
+[![built-with-azurra-framework](https://github.com/Elbullazul/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/Elbullazul/Azurra_framework)
+
+# Wear OS
+
 GTK theme based on colors and appearance of Google Wear OS 2.2
 
 ![wear-os](https://github.com/B00merang-Project/gallery/raw/master/Wear%20OS%20(3).png)
