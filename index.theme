@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Chromium OS Theme
-Comment=Chromium OS UI for Linux OSes
-Comment=Author : Christian Medel (Elbullazul)
-Version=v1.0 (beta)
+Name=Wear OS
+Comment=GTK theme based on Wear OS
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Chromium OS Theme
-MetacityTheme=Chromium OS Theme
+GtkTheme=Wear OS
+MetacityTheme=Android
+IconTheme=Suru
+CursorTheme=DMZ-Black
 ButtonLayout=:minimize,maximize,close
